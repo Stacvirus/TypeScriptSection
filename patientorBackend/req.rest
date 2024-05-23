@@ -1,0 +1,40 @@
+post http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+  "name": "Andrew Mathew",
+  "dateOfBirth": "2002-08-05",
+  "gender": "male",
+  "occupation": "student",
+  "ssn": "300179-77A",
+  "entries": []
+}
+
+###
+post http://localhost:3001/api/patients/d27736ec-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+  "description": "trimestial control visit. Darea plus Tyford, high risk of contration",
+  "date": "2024-22-05",
+  "specialist": "Stac Virus",
+  "diangonsisCodes": ["S62.5"],
+  "type": "HealthCheck",
+  "healthCheckRating": 15
+}
+
+###
+post http://localhost:3001/api/patients/d27736ec-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+  "description": "patient mistakenly harmed himself when branling him self",
+  "date": "2024-22-05",
+  "specialist": "Stac Virus",
+  "type": "OccupationalHealthcare",
+  "employerName": "MTN",
+  "sickLeave": {
+    "startDate": "2024-01-22",
+    "endDate": "2024-05-02"
+  }
+}
